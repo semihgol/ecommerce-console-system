@@ -17,11 +17,15 @@ public class Cart {
 
     public double getTotalPrice() {
         double total = 0.0;
-        for(Product p : this.products){
-            total +=p.getPrice();
+        for (Product p : this.products) {
+            total += p.getPrice();
         }
 
         return total;
+    }
+
+    public List<Product> getProducts() {
+        return this.products;
     }
 
 }

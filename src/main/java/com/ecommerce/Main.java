@@ -19,6 +19,16 @@ public class Main {
             user1.setWalletBalance(newBalance);
             System.out.println("Güncel bakiye:" + user1.getWalletBalance());
 
+            int newStock;
+            for (Product p: cart1.getProducts()){
+                newStock = p.getStockQuantity() - 1;
+                p.setStockQuantity(newStock);
+                System.out.println(p.getName()+ " Güncel stok: "+ newStock);
+
+
+            }
+
+
 
         } else {
             System.out.println("Sipariş onaylanmadı.Ödeme yönteminizi güncelleyiniz.(Yetersiz Bakiye) ");
